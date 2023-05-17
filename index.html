@@ -15,7 +15,7 @@
 
 <body id="initialPage">
 
-  <div class="container pt-5 mt-5">
+  <div class="container pt-5 mt-lg-5">
 
     <table class="table table-bordered table-dark text-center">
       <thead class="thead-dark">
@@ -47,8 +47,10 @@
         <!-- position-absolute top-50 start-50 translate-middle -->
         <div class="form text-center">
           <form class="register-form d-inline mx-auto" action="" onsubmit="return setAction(this)">
+            <label for="no" class="text-left" >Reg No:</label> <br>
             <input type="number" placeholder="Number" id="no" /> <br><br>
-            <input type="password" placeholder="password" id="password" /><br><br>
+            <label for="password" class="text-left" >Date of Birth:</label> <br>
+            <input type="password" placeholder="DDMMYYYY" id="password" /><br><br>
             <input type="submit" value="Submit" class="btn btn-primary">
           </form>
         </div>
@@ -90,7 +92,8 @@
                   typeof array[1] === 'string' ? '' : 'FAIL'
             );
 
-            hiddenT.insertAdjacentHTML("beforebegin", `<tr> <td>` + array[0] + `</td> <td>` + array[1] + `</td> <td   ` + (subResult == "PASS" ? `class="bg-success "` : subResult == "FAIL" ? `class="bg-danger"` : null) + `>` + subResult + `</td> </tr>`);
+            // hiddenT.insertAdjacentHTML("beforebegin", `<tr> <td>` + array[0] + `</td> <td>` + array[1] + `</td> <td   ` + (subResult == "PASS" ? `class="bg-success "` : subResult == "FAIL" ? `class="bg-danger"` : null) + `>` + subResult + `</td> </tr>`);
+            hiddenT.insertAdjacentHTML("beforebegin", `<tr> <td>` + array[0] + `</td> <td  `  + (array[1] === "PASS" ? `class="bg-success "` : array[1] === "FAIL" ? `class="bg-danger"` : array[1] > 100 ? `class="bg-warning text-dark"` : null) + ` >` + array[1] + `</td> <td   ` + (subResult == "PASS" ? `class="bg-success "` : subResult == "FAIL" ? `class="bg-danger"` : null) + `>` + subResult + `</td> </tr>`);
 
           };
 
@@ -103,7 +106,6 @@
           Name.innerHTML = `Name : ` + found.Name;
           Class.innerHTML = `Class : ` + found.Class;
 
-          console.log('pass coect');
         };
 
       }
@@ -117,7 +119,7 @@
       {
         "Number": 101,
         "Name": "AMAN ABDULLA",
-        "DOB": 1242016,
+        "DOB": 12042016,
         "Class": 1,
         "Arabic": 78,
         "Balapadam": 80,
@@ -127,7 +129,7 @@
       {
         "Number": 102,
         "Name": "SHELLAH C",
-        "DOB": 2582015,
+        "DOB": 25082015,
         "Class": 1,
         "Arabic": 72,
         "Balapadam": 70,
@@ -137,7 +139,7 @@
       {
         "Number": 201,
         "Name": "ASIL MOIZ",
-        "DOB": 222015,
+        "DOB": 2022015,
         "Class": 2,
         "Arabic": 71,
         "Quran": 74,
@@ -148,7 +150,7 @@
       {
         "Number": 202,
         "Name": "HAFFA K",
-        "DOB": 512015,
+        "DOB": 5012015,
         "Class": 2,
         "Arabic": 77,
         "Quran": 67,
@@ -170,7 +172,7 @@
       {
         "Number": 204,
         "Name": "RIFA ZAINAB T",
-        "DOB": 812015,
+        "DOB": 8012015,
         "Class": 2,
         "Arabic": 78,
         "Quran": 68,
@@ -194,7 +196,7 @@
       {
         "Number": 302,
         "Name": "KENZ",
-        "DOB": 522013,
+        "DOB": 5022013,
         "Class": 3,
         "Arabic": 62,
         "Karmam": 72,
@@ -207,7 +209,7 @@
       {
         "Number": 303,
         "Name": "ZAYAN PK",
-        "DOB": 2682013,
+        "DOB": 26082013,
         "Class": 3,
         "Arabic": 49,
         "Karmam": 59,
@@ -220,7 +222,7 @@
       {
         "Number": 304,
         "Name": "AYSHA RAHMATH",
-        "DOB": 532014,
+        "DOB": 5032014,
         "Class": 3,
         "Arabic": 74,
         "Karmam": 80,
@@ -233,7 +235,7 @@
       {
         "Number": 305,
         "Name": "HIZZA C",
-        "DOB": 3182013,
+        "DOB": 31082013,
         "Class": 3,
         "Arabic": 76,
         "Karmam": 80,
@@ -246,7 +248,7 @@
       {
         "Number": 306,
         "Name": "KENZA C",
-        "DOB": 2782013,
+        "DOB": 27082013,
         "Class": 3,
         "Arabic": 72,
         "Karmam": 80,
@@ -259,7 +261,7 @@
       {
         "Number": 307,
         "Name": "RINSHA FATHIMA",
-        "DOB": 2072014,
+        "DOB": 20072014,
         "Class": 3,
         "Arabic": 65,
         "Karmam": 79,
@@ -272,7 +274,7 @@
       {
         "Number": 401,
         "Name": "AMANA TP",
-        "DOB": 382012,
+        "DOB": 3082012,
         "Class": 4,
         "Arabic": 65,
         "Karmam": 49,
@@ -285,7 +287,7 @@
       {
         "Number": 402,
         "Name": "HISMA K",
-        "DOB": 922013,
+        "DOB": 9022013,
         "Class": 4,
         "Arabic": 63,
         "Karmam": 46,
@@ -311,7 +313,7 @@
       {
         "Number": 602,
         "Name": "HISHAN C",
-        "DOB": 672009,
+        "DOB": 6072009,
         "Class": 6,
         "Arabic": 33,
         "Karmam": 69,
@@ -337,7 +339,7 @@
       {
         "Number": 604,
         "Name": "ISHMA C",
-        "DOB": 1312011,
+        "DOB": 13012011,
         "Class": 6,
         "Arabic": 49,
         "Karmam": 54,
@@ -350,7 +352,7 @@
       {
         "Number": 801,
         "Name": "AMIN VISAM",
-        "DOB": 1882009,
+        "DOB": 18082009,
         "Class": 8,
         "Arabic": 33,
         "Charithram": 21,
@@ -363,7 +365,7 @@
       {
         "Number": 802,
         "Name": "MEHNA K",
-        "DOB": 342009,
+        "DOB": 3042009,
         "Class": 8,
         "Arabic": 57,
         "Charithram": 66,
@@ -373,34 +375,58 @@
         "TOTAL": 328,
         "Status": "PASS"
       },
-      // {
-      //   "Number": 901,
-      //   "Name": "ALOOF ABDULLA",
-      //   "DOB": 6112008,
-      //   "Class": 9,
-      //   "TOTAL": 0
-      // },
-      // {
-      //   "Number": 902,
-      //   "Name": "ANOOF IBNU HANEEF",
-      //   "DOB": 1172008,
-      //   "Class": 9,
-      //   "TOTAL": 0
-      // },
-      // {
-      //   "Number": 903,
-      //   "Name": "HASWOOR HANEEFA K",
-      //   "DOB": 9102008,
-      //   "Class": 9,
-      //   "TOTAL": 0
-      // },
-      // {
-      //   "Number": 904,
-      //   "Name": "MUNAWER TP",
-      //   "DOB": 2542008,
-      //   "Class": 9,
-      //   "TOTAL": 0
-      // }
+      {
+        "Number": 901,
+        "Name": "ALOOF ABDULLA",
+        "DOB": 6112008,
+        "Class": 9,
+        "Arabic": 63,
+        "Charithram": 44,
+        "Vishwasam": 57,
+        "Quran": 67,
+        "Hadees": 42,
+        "TOTAL": 273,
+        "Status": "PASS"
+      },
+      {
+        "Number": 902,
+        "Name": "ANOOF IBNU HANEEF",
+        "DOB": 11072008,
+        "Class": 9,
+        "Arabic": 55,
+        "Charithram": 32,
+        "Vishwasam": 44,
+        "Quran": 33,
+        "Hadees": 65,
+        "TOTAL": 229,
+        "Status": "PASS"
+      },
+      {
+        "Number": 903,
+        "Name": "HASWOOR HANEEFA K",
+        "DOB": 9102008,
+        "Class": 9,
+        "Arabic": 46,
+        "Charithram": 26,
+        "Vishwasam": 42,
+        "Quran": 41,
+        "Hadees": 59,
+        "TOTAL": 214,
+        "Status": "FAIL"
+      },
+      {
+        "Number": 904,
+        "Name": "MUNAWER TP",
+        "DOB": 25042008,
+        "Class": 9,
+        "Arabic": 34,
+        "Charithram": 21,
+        "Vishwasam": 28,
+        "Quran": 10,
+        "Hadees": 55,
+        "TOTAL": 148,
+        "Status": "FAIL"
+      }
     ];
 
 
@@ -436,7 +462,7 @@
         </tbody>
       </table>
       
-      <button type="button" class="btn btn-warning" id="resetPageBtn" onClick="window.location.reload();">Check Another</button>
+      <button type="button" class="btn btn-primary  mb-5" id="resetPageBtn" onClick="window.location.reload();">Check Another</button>
       `
 
 
